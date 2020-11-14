@@ -1,24 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hxa-8C-bfI">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GuessingGame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yew-hA-DGb">
+                                <rect key="frame" x="107" y="100" width="200" height="100"/>
+                                <state key="normal" image="ireland"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jpi-mO-U5N">
+                                <rect key="frame" x="107" y="230" width="200" height="100"/>
+                                <state key="normal" image="ireland"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bJj-fL-FG4">
+                                <rect key="frame" x="107" y="360" width="200" height="100"/>
+                                <state key="normal" image="ireland"/>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="jpi-mO-U5N" firstAttribute="centerX" secondItem="yew-hA-DGb" secondAttribute="centerX" id="4Do-Hv-zyg"/>
+                            <constraint firstItem="yew-hA-DGb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="12" id="5w3-w9-CCQ"/>
+                            <constraint firstItem="jpi-mO-U5N" firstAttribute="top" secondItem="yew-hA-DGb" secondAttribute="bottom" constant="30" id="E0f-BP-r5W"/>
+                            <constraint firstItem="bJj-fL-FG4" firstAttribute="centerX" secondItem="jpi-mO-U5N" secondAttribute="centerX" id="U1A-GU-yFk"/>
+                            <constraint firstItem="bJj-fL-FG4" firstAttribute="top" secondItem="jpi-mO-U5N" secondAttribute="bottom" constant="30" id="d9q-Kv-YOe"/>
+                            <constraint firstItem="yew-hA-DGb" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="p5t-ec-OJi"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="DJ2-UI-Oye"/>
+                    <connections>
+                        <outlet property="button1" destination="yew-hA-DGb" id="UUJ-Gg-JNB"/>
+                        <outlet property="button2" destination="jpi-mO-U5N" id="QVD-fV-nOr"/>
+                        <outlet property="button3" destination="bJj-fL-FG4" id="T9Z-Wo-K7b"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="928.98550724637687" y="75"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="0nb-We-A7P">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hxa-8C-bfI" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="NZ4-D8-ewd">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="e8l-WY-Tg0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f3F-v7-hdQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="75"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ireland" width="200" height="100"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
